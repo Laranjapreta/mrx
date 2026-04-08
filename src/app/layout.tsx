@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { CustomCursor } from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "MRX | Onde criatividade encontra tecnologia",
   description:
-    "A MRX e um hub criativo de especialistas em software e engenharia de dados. Transformamos suas visoes em realidades digitais.",
+    "A MRX é um hub criativo de especialistas em software e engenharia de dados. Transformamos suas visões em realidades digitais.",
 };
 
 export default function RootLayout({
@@ -31,6 +32,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground">
+        <CustomCursor />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

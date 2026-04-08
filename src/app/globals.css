@@ -3,20 +3,14 @@
 @theme inline {
   --color-background: #050505;
   --color-foreground: #ededed;
-  --color-accent: #ff4d00;
-  --color-accent-hover: #ff6a2a;
+  --color-accent: #ffffff;
+  --color-accent-hover: #cccccc;
   --color-muted: #888888;
   --color-card: #111111;
   --color-card-hover: #1a1a1a;
   --color-border: #222222;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -29,12 +23,15 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-::selection {
-  background: var(--color-accent);
-  color: white;
+* {
+  cursor: none !important;
 }
 
-/* Scrollbar */
+::selection {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
